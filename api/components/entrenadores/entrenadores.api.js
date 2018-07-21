@@ -8,7 +8,8 @@ module.exports.registrar = function(req,res){
         Nombre :req.body.Nombre,
         Edad :req.body.Edad,
         Sexo :req.body.Sexo,
-        Foto :req.body.Foto
+        Foto :req.body.Foto,
+        ColeccionPokemons:req.body.Pokemons
     });
 
     nuevoEntrenador.save(function(error){
