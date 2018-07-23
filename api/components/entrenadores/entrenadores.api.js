@@ -8,8 +8,7 @@ module.exports.registrar = function(req,res){
         Nombre :req.body.Nombre,
         Edad :req.body.Edad,
         Sexo :req.body.Sexo,
-        Foto :req.body.Foto,
-        ColeccionPokemons:req.body.Pokemons
+        Foto :req.body.Foto
     });
 
     nuevoEntrenador.save(function(error){
@@ -36,6 +35,7 @@ module.exports.filtrar = function(req, res){
         entrenadorModel.find(
             {
                 "Numero": req.body.valor
+                            
             }
             ).then(
                 function(entrenadores){
@@ -46,7 +46,9 @@ module.exports.filtrar = function(req, res){
         case "2":
         entrenadorModel.find(
             {
-                "Nombre": req.body.valor
+            "Nombre":   {  
+                            $regex: new RegExp(req.body.valor, "ig")
+                        } 
             }
             ).then(
                 function(entrenadores){

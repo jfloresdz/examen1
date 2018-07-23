@@ -45,7 +45,9 @@ module.exports.filtrar = function(req, res){
         case "2":
         pokemonModel.find(
             {
-                "Nombre": req.body.valor
+                "Nombre":  {  
+                    $regex: new RegExp(req.body.valor, "ig")
+                } 
             }
             ).then(
                 function(pokemons){

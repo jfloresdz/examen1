@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemons</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form_1.css">
+    <link rel="stylesheet" type="text/css" href="CSS/Table.css">
+</head>
+<body>
+    <header>
+        <img src="img/Pokemon_Logo.png" class="logo"> 
+        <nav id="nav-1">
+            <a class="link" href="index.html">Inicio</a>
+            <a class="link" href="registrarPokemon.html">Pokemons</a>
+            <a class="link" href="registrarEntrenador.html">Entrenadores</a>
+          </nav>
+    </header>
+    <main>
+        <form class="cf">
+            <h1>Registrar Pokemon</h1>
+            <div class="half left cf">
+              <input type="text" id="inputNumero" placeholder="Numero" min="0" max="999999">
+              <input type="text" id="inputNombre" placeholder="Nombre">
+            </div>
+            <div class="half right cf">
+              <select id="inputTipo1">
+                <option value="" disabled selected>Seleccione Tipo 1</option>
+              </select>
+              <select id="inputTipo2">
+                <option value="" disabled selected>Seleccione Tipo 2</option>
+              </select>
+              <button type="button" class="input-submit" id="btnSeleccionarImagen"> Foto </button>
+              <input type="hidden" id="inputFoto" value="">
+            </div>
+            <button type="button" class="input-submit" id="btnRegistrar"> Registrar </button>
+          </form>
+          <br>
+
+          <div class="flexsearch">
+            <div class="flexsearch--wrapper">
+                <div class="flexsearch--form">
+                    <div class="flexsearch--input-wrapper">
+                        <input class="flexsearch--input" type="text" id="inputBuscar" placeholder="Search">
+                    </div>
+                    <button type="button" class="flexsearch--submit" id="btnBuscar">&#10140;</button>
+                </div>
+            </div>
+        </div>
+
+          <div class="table-users">
+            <div class="tittle">Pokemon
+            </div>
+          <table class="table" id="tbPokemones" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                 <th>Numero</th>
+                 <th>Nombre</th>
+                 <th>Tipo 1</th>
+                 <th>Tipo 2</th>
+                 <th>Foto</th>
+              </tr>
+            </thead>
+          <tbody>
+            
+          </tbody>
+          </table>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/jquery-3.3.1.js"></script>
+    <!-- Inicio: Scripts de cloudinary -->
+    <script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+    <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <!-- Fin: Scripts de cloudinary -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="js/servicioImagenes.js"></script>
+    <script src="js/pokemons/servicio.js"></script>
+    <script src="js/pokemons/controlador.js"></script>
+</body>
+</html>
