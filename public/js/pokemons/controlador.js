@@ -16,6 +16,7 @@ let inputNombre = document.querySelector('#inputNombre');
 let inputTipo1 = document.querySelector('#inputTipo1');
 let inputTipo2 = document.querySelector('#inputTipo2');
 let inputFoto = document.querySelector('#inputFoto');
+let inputTipoBuscar = document.querySelector('#inputTipoBuscar');
 let inputBuscar = document.querySelector('#inputBuscar');
 
 llenarTipos();
@@ -125,6 +126,12 @@ function llenarTipos(){
         option.setAttribute('value', Tipos[i].value);
         option.appendChild(document.createTextNode(Tipos[i].text));
         inputTipo2.appendChild(option);
+    }
+    for (let i=0; i < il; i ++) {
+        option = document.createElement('option');
+        option.setAttribute('value', Tipos[i].value);
+        option.appendChild(document.createTextNode(Tipos[i].text));
+        inputTipoBuscar.appendChild(option);
     }
 }
 
